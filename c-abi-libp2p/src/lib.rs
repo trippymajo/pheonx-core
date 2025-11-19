@@ -2,6 +2,7 @@ pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
 pub mod config;
+pub mod ffi;
 pub mod messaging;
 pub mod peer;
 pub mod transport;
@@ -16,6 +17,7 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
+pub use ffi::*;
 pub use messaging::*;
 pub use peer::*;
 pub use transport::*;

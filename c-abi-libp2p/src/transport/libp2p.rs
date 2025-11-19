@@ -12,8 +12,7 @@ use libp2p::{
     kad::{self, store::MemoryStore},
     noise, ping, quic,
     swarm::{Config as SwarmConfig, Swarm},
-    tcp,
-    PeerId,
+    tcp, PeerId,
 };
 use std::time::Duration;
 

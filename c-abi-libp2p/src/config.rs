@@ -16,7 +16,8 @@ static TRACING_INITIALIZED: OnceCell<()> = OnceCell::new();
 pub fn init_tracing() -> Result<()> {
     TRACING_INITIALIZED
         .get_or_try_init(|| {
-            let env_filter = EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
+            let env_filter =
+                EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info"));
             fmt::Subscriber::builder()
                 .with_env_filter(env_filter)
                 .try_init()
