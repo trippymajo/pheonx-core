@@ -89,6 +89,7 @@ impl PeerManager {
             command_receiver,
             local_peer_id,
             keypair,
+            autonat_status,
         };
 
         let handle = PeerManagerHandle {

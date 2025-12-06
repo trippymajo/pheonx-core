@@ -18,8 +18,8 @@ use std::{
 };
 
 use anyhow::{Context, Result};
-use ::libp2p::Multiaddr;
-use tokio::{runtime::Runtime, task::JoinHandle};
+use ::libp2p::{autonat, Multiaddr};
+use tokio::{runtime::Runtime, sync::watch, task::JoinHandle};
 
 /// More suitable alias for results while using C-ABI libp2p rust lib
 type FfiResult<T> = std::result::Result<T, c_int>;
